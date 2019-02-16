@@ -1,0 +1,17 @@
+# IDE
+.vs/*
+.vscode/*
+.idea/*
+*.iml
+
+# Build
+dist/
+__pycache__
+share/*
+node_modules/
+
+# Metadata
+*-map.json
+
+# yarn
+yarn.lock
