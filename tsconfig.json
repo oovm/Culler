@@ -1,0 +1,8 @@
+{
+    "references": [
+        {
+            "path": "./projects/group-theory"
+        }
+    ],
+    "files": []
+}
