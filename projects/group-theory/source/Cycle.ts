@@ -1,12 +1,9 @@
+import { isPostiveInteger } from "./function";
+
 type CyclesList = number[][] | number[]
-//PermutationCycles => number[]
-//Cycles => number[][]
+type PermutationCycles = number[]
+type Cycles = number[][]
 //Identity = new Cycles([])
-
-function isNature(n: number) {
-    return true
-}
-
 
 function isValid(list: CyclesList) {
     return true
