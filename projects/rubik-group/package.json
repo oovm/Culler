@@ -1,0 +1,11 @@
+{
+    "name": "@culler/rubik-group",
+    "version": "0.1.0",
+    "main": "index.js",
+    "license": "MIT",
+    "babel": {
+    },
+    "dependencies": {
+        "@culler/group-theory": "^0.1.0"
+    }
+}
