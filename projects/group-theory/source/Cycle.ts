@@ -1,6 +1,5 @@
-import { isPostiveInteger } from "./function";
+import { isNatural, flatten } from './function'
 
-type CyclesList = number[][] | number[]
 type PermutationCycles = number[]
 type Cycles = number[][]
 //Identity = new Cycles([])
@@ -13,17 +12,30 @@ function permute2cycle(input: any[]): Cycles {
     return input
 }
 
-function isValid(list: CyclesList) {
+
+//TODO: 
+function isValid(list: Cycles) {
+
+    let flat = flatten(list)
+
+    // All Natural Number
+    if (!flat.every(isNatural)) {
+        return false
+    }
+
     return true
 }
 
-function simplify(list: CyclesList) {
+
+//TODO: 
+function simplify(list: Cycles) {
     return list
 }
 
+
 //Cycles
 export class Cycle {
-    private List: Cycles;
+    private List: Cycles
 
     constructor (input: Cycles | PermutationCycles) {
 
@@ -37,22 +49,19 @@ export class Cycle {
             Error('List not Valid!')
         }
 
-        this.List = input;
+        this.List = input
     }
 
     get list() { return this.List }
 
-    //PermutationList
+    //TODO: PermutationList
     sequence() {
         return this.List
     }
 
     //InversePermutation
     reverse() {
-        return this.List
+        const v = this.List.map(x => x.reverse())
+        return this.List = simplify(v)
     }
-
-
-
-
 }

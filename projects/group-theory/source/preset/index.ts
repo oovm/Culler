@@ -3,21 +3,25 @@ import CyclicGroup from './CyclicGroup'
 import DihedralGroup from './DihedralGroup'
 import SymmetricGroup from './SymmetricGroup'
 
+
 export class Preset {
-    Alternating(n:number) {
-        AlternatingGroup
+    Alternating(n: number) {
+        new AlternatingGroup(n)
     }
 
-    Cyclic(n:number) {
+    Cyclic(n: number) {
         CyclicGroup
     }
 
-    Dihedral(n:number) {
+    Dihedral(n: number) {
         DihedralGroup
     }
 
-    Symmetric(n:number) {
+    Symmetric(n: number) {
         SymmetricGroup
     }
 
 }
+
+import PermutationGroup from './PermutationGroup'
+export { PermutationGroup }
