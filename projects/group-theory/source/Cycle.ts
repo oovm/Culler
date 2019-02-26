@@ -5,6 +5,14 @@ type PermutationCycles = number[]
 type Cycles = number[][]
 //Identity = new Cycles([])
 
+//TODO: 
+function permute2cycle(input: any[]): Cycles {
+    if (input.every(v => typeof v != 'number')) {
+        return input
+    }
+    return input
+}
+
 function isValid(list: CyclesList) {
     return true
 }
@@ -15,16 +23,21 @@ function simplify(list: CyclesList) {
 
 //Cycles
 export class Cycle {
-    constructor (
-        private List: CyclesList
-    ) {
-        if (isValid(List)) {
-            this.List = simplify(List)
-            console.log(this.List)
+    private List: Cycles;
+
+    constructor (input: Cycles | PermutationCycles) {
+
+        input = permute2cycle(input)
+
+        if (isValid(input)) {
+            input = simplify(input)
+            console.log(input)
         }
         else {
-            Error('not valid')
+            Error('List not Valid!')
         }
+
+        this.List = input;
     }
 
     get list() { return this.List }

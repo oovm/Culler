@@ -3,7 +3,6 @@
         "semicolon": [true, "never"],
         "quotemark": [true, "single", "avoid-escape", "avoid-template"],
         "indent": [true, "space", 4],
-        "no-unsafe-any": true,
         "no-var-requires": true,
         "member-access": false,
         "trailing-comma": true
